@@ -46,11 +46,17 @@
   </nav>
 
   <!-- HERO -->
-  <section id="hero" class="relative min-h-[92vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-aurora-navy via-aurora-navy-light/50 to-aurora-navy"></div>
-    <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 72px 72px;"></div>
-    <div class="absolute top-1/3 right-1/3 w-[500px] h-[500px] rounded-full bg-aurora-green/[0.04] blur-[120px]"></div>
-    <div class="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-aurora-blue/[0.04] blur-[120px]"></div>
+  <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover" poster="">
+      <source src="/assets/video/aurora.mp4" type="video/mp4" />
+    </video>
+    <!-- Dark overlay for readability -->
+    <div class="absolute inset-0 bg-aurora-navy/70"></div>
+    <!-- Bottom gradient fade into next section -->
+    <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-aurora-navy to-transparent"></div>
+    <!-- Top gradient for nav blend -->
+    <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-aurora-navy/60 to-transparent"></div>
 
     <div class="relative max-w-6xl mx-auto px-5 lg:px-8 pt-28 pb-16 lg:pt-36 lg:pb-24">
       <div class="max-w-2xl">
