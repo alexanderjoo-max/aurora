@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-aurora-green: #2ecc71;
+  --color-aurora-green-light: #7ef473;
+  --color-aurora-blue: #1a6fc4;
+  --color-aurora-blue-dark: #0d3b6e;
+  --color-aurora-navy: #0a1628;
+  --color-aurora-navy-light: #132240;
+  --color-aurora-slate: #1e293b;
+  --color-aurora-gray: #94a3b8;
+  --color-aurora-gray-light: #f1f5f9;
+  --color-aurora-white: #ffffff;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+}
+
+/* Scroll animations */
+.animate-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero is always visible */
+#hero {
+  opacity: 1;
+  transform: none;
+}
+
+/* Slide down animation for panels */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Fade in for hero elements */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
